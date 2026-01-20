@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #020617, #000);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  padding: 35px;
+  border-radius: 22px;
+  width: 450px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+h1 {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.tag {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 25px;
+}
+
+.arena {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+/* COMMON SHAPE STYLE */
+.shape {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  opacity: 0.25;
+  transform: scale(0.85);
+  transition: all 0.45s ease;
+  filter: blur(0.3px);
+}
+
+/* SHAPES */
+.circle {
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 25px #22d3ee;
+}
+
+.hex {
+  clip-path: polygon(
+    25% 6%, 75% 6%,
+    100% 50%, 75% 94%,
+    25% 94%, 0% 50%
+  );
+  background: #a78bfa;
+  box-shadow: 0 0 25px #a78bfa;
+}
+
+.pill {
+  width: 90px;
+  border-radius: 50px;
+  background: #4ade80;
+  box-shadow: 0 0 25px #4ade80;
+}
+
+.diamond {
+  transform: rotate(45deg) scale(0.85);
+  background: #fb7185;
+  box-shadow: 0 0 25px #fb7185;
+}
+
+/* ACTIVE */
+.active {
+  opacity: 1;
+  transform: translateY(-22px) scale(1.1);
+  filter: blur(0);
+}
+/* ==== Stylish Run Animation Button ==== */
+.run-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.run-btn span {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  background: linear-gradient(
+    90deg,
+    #22d3ee,
+    #a78bfa,
+    #fb7185,
+    #4ade80
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s infinite linear;
+}
+
+.run-btn:hover span {
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.6),
+    0 0 25px rgba(139,92,246,0.8);
+  transform: scale(1.1);
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+/* ==== Author Name ==== */
+.author {
+  margin-top: 18px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.author b {
+  background: linear-gradient(90deg, #a78bfa, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

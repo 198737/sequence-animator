@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Sequence Animator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="glass">
+  <h1>Sequence Animator</h1>
+  <p class="tag">Stylized execution flow visualizer</p>
+
+  <select id="pattern">
+    <option value="linear">Linear Flow</option>
+    <option value="center">Center Out</option>
+    <option value="random">Chaos Mode</option>
+    <option value="wave">Wave Pulse</option>
+  </select>
+
+  <div class="arena">
+    <div class="shape circle">A</div>
+    <div class="shape hex">B</div>
+    <div class="shape pill">C</div>
+    <div class="shape diamond">D</div>
+  </div>
+
+  <button class="run-btn" onclick="play()">
+  <span>Run Animation</span>
+</button>
+
+<p class="author">Designed by <b>Sandhra</b></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
